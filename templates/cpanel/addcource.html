@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Cources</title>
+    {% include 'link.html' %}
+
+    <style>
+    .txt{
+        width: 400px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(193, 235, 235);
+        margin: 7px;
+        padding: 7px;
+
+    }
+
+    .btn1{
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(52, 153, 168);
+        margin: 7px;
+    }
+</style>
+</head>
+<body>
+    {% include 'cpanel/adminheader.html' %}
+
+    <br><br>
+
+    <form action="addco" method="post" align="center" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br><br>
+        <div>
+            
+            <h2 class="m-0 text-primary">Add Cources</h2>
+            <h2 class="m-0 text-primary">''''''''''''''''''''''''''</h2>
+        </div><br>
+        
+        <div>
+            <input type="text" name="courcen" class="txt"  placeholder="Cource name">
+        </div>
+
+        <div>
+            <input type="file" name="finame" placeholder="Choose image" class="txt" >
+        </div>
+
+        <div>
+            <input  type="submit" name="subcou" class="btn1">
+        </div>
+    </form>
+    <br><br><br><br><br><br>
+
+    {% include 'cpanel/adminfooter.html' %}
+</body>
+</html>

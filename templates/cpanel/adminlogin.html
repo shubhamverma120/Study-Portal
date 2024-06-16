@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Login</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <style>
+        .txt{
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(193, 235, 235);
+            margin: 10px;
+            padding: 10px;
+
+
+        }
+
+        .btn1{
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(52, 153, 168);
+        }
+    </style>
+
+    {% include 'link.html' %}
+   
+</head>
+<body>
+    <form method="post" action="checkadmin" align="center">
+        {% csrf_token %}
+
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Admin Dashboard</h2>
+            </a>
+        </nav><br><br><br><br><br>
+
+        <div>
+            <h2 class="m-0 text-primary">Admin Login</h2>
+            <h2 class="m-0 text-primary">----------------</h2>
+        </div><br>
+        
+        <div>
+            <input type="text" name="un" class="txt" placeholder="Username" >
+        </div>
+
+        <div>
+            <input type="password" name="pas" class="txt" placeholder="Password" >
+         </div><br>
+
+        <div>
+            <input type="submit" name="sub" class="btn1" >
+         </div>
+         <br><br><br><br><br><br><br>
+
+        {% include 'cpanel/adminfooter.html' %}
+       
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Reset password for Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <style>
+        .txt{
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(193, 235, 235);
+            margin: 10px;
+            padding: 5px;
+
+        }
+
+        .btn1{
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(52, 153, 168);
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+
+    {% include 'link.html' %}
+   
+</head>
+<body>
+    <form method="post" action="resetpassword" align="center">
+        {% csrf_token %}
+
+        {% include 'cpanel/adminheader.html' %}
+        <br><br><br><br><br>
+
+        <div>
+            <h2 class="m-0 text-primary">Reset password</h2>
+        </div>
+        <br><br>
+        <div>
+            <input type="password" name="pass1" class="txt" placeholder="New Password" >
+        </div>
+
+        <div>
+            <input type="password" name="pass2" class="txt" placeholder=" Confirm Password" >
+         </div>
+
+        <div>
+            <input type="submit" name="sub" class="btn1" >
+         </div>
+         <br><br><br><br><br><br>
+
+        {% include 'cpanel/adminfooter.html' %}
+       
+    </form>
+    
+</body>
+</html>

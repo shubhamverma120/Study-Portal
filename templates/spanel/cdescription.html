@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show cource in description</title>
+
+    {% include 'link.html' %}
+
+    <style>
+       
+        .div1{
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #19398f;
+            margin: 10px;
+            background-color:rgb(207, 240, 235);
+            color: rgb(0, 0, 0);
+            border:1px solid #ccc;
+            padding:15px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    {% include 'spanel/sheader.html' %}
+    
+    
+    <div class="container mt=5">
+        <div class="row">
+            <div class="div1">
+                <center>
+                    <h2>
+                        {{cname}}
+                    </h2>
+                </center>
+            </div >
+            {% for x in data %}
+
+            <center>
+            <div class="col=12 ">
+                <div class="div1">
+                    <h4>
+                        {{x.contitle}}
+                    </h4>
+
+                    <p >
+                        {{x.condes}}
+                    </p>
+
+                    <a href="{{x.conlink}}" class="btn btn-secondary">video link</a>
+
+                    <a href="/static/{{x.confile}}"  class="btn btn-primary "> Download</a>
+                </div>
+            </div>
+        </center>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    
+</body>
+</html>

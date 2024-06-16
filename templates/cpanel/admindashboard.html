@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Registration</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+  {% include 'link.html' %}
+</head>
+<body>
+    {% include 'cpanel/adminheader.html' %}
+    <form>
+    <section class="team section-padding" data-scroll-index='3'>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="sectioner-header text-center">
+              <h3><br><br><br> Welcome To Admin Panel</h3>
+              <span class="line"></span><br>
+              
+            </div>
+            <div class="section-content text-center">
+              <div class="row">
+                <div class="col-md-6">
+                  <div style="border:2px solid #333;border-radius:20px;height:230px;padding:  20px;line-height:230px;margin: 20px;">
+                    <h5><br><br><br>{{trs}} <br> Total Registerd <br> Students</h5>
+                   </div>
+                </div>
+                <div class="col-md-6">
+                  <div style="border:2px solid #333;border-radius:20px;height:230px;padding:  20px;line-height:230px;margin: 20px;">
+                    <h5><br><br><br>{{tcor}} <br> Total Cource </h5>
+                   </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        
+    </form>
+    <br><br><br><br>
+    {% include 'cpanel/adminfooter.html' %}
+</body>
+</html>

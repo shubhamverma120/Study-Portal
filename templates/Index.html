@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Study portal</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    {% include 'link.html' %}
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar and Carousel Start -->
+        {% include 'header.html' %}
+
+        <!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="static/assetshome/img/carousel-1.jpg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                            <h1 class="display-3 text-white animated slideInDown">The Best Online e-books</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">We have different types of e-books available</p>
+                            <a href="/student_reg" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="static/assetshome/img/carousel-2.jpg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                            <h1 class="display-3 text-white animated slideInDown">Get books Online From Your Home</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">We have different varieties of books that are available for free. You can use it at any time and any way.</p>
+                            <a href="/student_reg" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+    <!-- Navbar and Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Book Library</h5>
+                            <p>We have different types of books and hand written notes available for any Students.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Free of cost</h5>
+                            <p>All the books which are availablein websites are free of cost.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="static/assetshome/img/about.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">Welcome to Study Portal</h1>
+                    <p class="mb-4">Welcome to StudyPortal, your one-stop destination for academic resources! At StudyPortal, we believe in the power of education and the importance of accessible learning materials for every student.</p>
+                    <p class="mb-4">Our platform is designed to provide students with easy access to a wide range of e-books, notes, and study materials, helping them to excel in their academic journey.</p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Extensive Library of E-books</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Detailed Study Notes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>User-Friendly Interface:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Community Contributions</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Regular Updates</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
+                <h1 class="mb-5">Courses</h1>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    
+                    {% for x in data %}
+                    
+                    <div class="col-3 mb-3 mt-3">
+                        <div style="border:1px solid #ccc;border-radius:10px;padding:15px;-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);">
+                            <center>
+                                <a href="">
+                                    <img src="static/{{x.cimg}}" width="150" height="150"><br><br>
+                                    <h4>{{x.cname}}</h4>
+                                 </a>
+                            </center>
+                        </div>
+                    </div>
+                    {% endfor %}
+                
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <!-- Categories Start -->
+     <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h1 class="mb-5">Our Students Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="static/assetshome/img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Riya</h5>
+                    <p>B. tech</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">"Thanks to this website, I've been able to stay on top of my studies like never before. The range of documents available is impressive, and the download process is super simple."</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="static/assetshome/img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Jittu</h5>
+                    <p>MCA</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">"I love how organized this study portal is. It's made studying so much more efficient for me, and I've seen a noticeable improvement in my grades since I started using it."</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="static/assetshome/img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">M. Tech</h5>
+                    <p>xyz</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">"As a busy student, having access to downloadable notes is a lifesaver. This website has everything I need to succeed academically, and I can't recommend it enough."</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="static/assetshome/img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Rinki</h5>
+                    <p>BCA</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">"This study portal is a must-have for any student serious about their academics. The variety of documents available covers all my subjects, and the quality is top-notch."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+        
+
+    <!-- Footer Start -->
+    {% include 'footer.html' %}
+    
+    <!-- Footer End -->
+
+
+   
+</body>
+
+</html>

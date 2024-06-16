@@ -1,0 +1,23 @@
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="/scource" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Student Dashboard</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/scource" class="nav-item nav-link active">Home</a>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Welcome&nbsp &nbsp{{request.session.sn1}}</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="/sprofile" class="dropdown-item">Profile</a>
+                    <a href="/spassreset" class="dropdown-item">Reset Password</a>
+                    <a href="/slogout" class="dropdown-item">Logout</a>
+                </div>
+            </div>
+
+</nav>
+<!-- Navbar End -->

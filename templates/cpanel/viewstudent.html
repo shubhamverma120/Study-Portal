@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View student</title>
+    {% include 'link.html'%}
+
+    <style>
+        table{
+            width: 100%;
+            height: 20%;
+            margin: 3%;
+            padding: 10px;
+            margin-left: 0%;
+            font-size: 20px;
+            border-color: black;
+        
+            
+        }
+       
+    </style>
+</head>
+<body>
+    {% include 'cpanel/adminheader.html'%}
+    <div class="container" style="background: #fff; padding:20px; margin:20px; border-radius:20px;">
+        <div class="row">
+            <div class="col-12"
+            <form method="post" action="">
+                <center>
+        <table class="tablr table-bordered">
+            <tr align="center">
+                <th colspan="8" style="font-size: 40px;"> Student Detail</th>
+            </tr>
+            <tr align="center" style="padding: 10px;">
+                <th>Student name</th>
+                <th>Gender</th>
+                <th>Contact number</th>
+                <th>Email ID</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Password</th>
+                <th>Image</th>
+            </tr>
+
+            {% for x in data %}
+            <tr align="center">
+                <td>{{x.sname}}</td>
+                <td>{{x.sgen}}</td>
+                <td>{{x.sco}}</td>
+                <td>{{x.email}}</td>
+                <td>{{x.sadd}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.cpass}}</td>
+                <td><img src="static/{{x.simg}}" width="50" height="25"></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </center>
+    </form>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+    {% include 'cpanel/adminfooter.html'%}
+    
+</body>
+</html>

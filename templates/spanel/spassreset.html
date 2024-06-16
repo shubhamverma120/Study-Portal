@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Reset password for Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <style>
+        .div1{
+            padding: 10px;
+            margin: 10px;
+        }
+        .txt{
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(193, 235, 235);
+
+
+        }
+
+        .btn1{
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(52, 153, 168);
+        }
+    </style>
+
+    {% include 'link.html' %}
+   
+</head>
+<body>
+    <form method="post" action="sresetpassword" align="center">
+        {% csrf_token %}
+
+        {% include 'spanel/sheader.html' %}
+        <br><br><br><br><br>
+
+        <div class="div1">
+            <h2 class="m-0 text-primary">Reset password</h2>
+        </div>
+        <br><br>
+        <div class="div1">
+            <input type="password" name="pas1" class="txt" placeholder="New Password" >
+        </div>
+
+        <div class="div1"> 
+            <input type="password" name="pas2" class="txt" placeholder=" Confirm Password" >
+         </div>
+
+        <div class="div1">
+            <input type="submit" name="sub" class="btn1" >
+         </div>
+         <br><br>
+
+        {% include 'spanel/sfooter.html' %}
+       
+    </form>
+    
+</body>
+</html>

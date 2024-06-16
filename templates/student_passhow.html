@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student id and password show</title>
+  
+    <style>
+        .p{
+            
+            font-size: 30px;
+
+        }
+
+        body{
+            display:inherit;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        div{
+            width: 100%;
+            font-size: 180%;
+            top: 40%;
+            bottom: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+   
+    <div align="center">
+      
+        <p>
+            <h2>Hello {{sname1}}</h2>
+            <h4>Please note your Student name and Password for future use,</h4>
+            <h3>
+                Student name is : {{email}}<br>
+                Password is : {{cpass}}
+            </h3>
+
+            <a href="student_login">Click to login</a>
+
+
+        </p>
+    </div>
+ 
+</body>
+</html>

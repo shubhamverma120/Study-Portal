@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the content of the Cource</title>
+    {% include 'link.html' %}
+
+    <style>
+        .dv{
+            margin: 50px;
+            padding: 10px;
+        }
+
+        .tbl{
+            width: 600px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(168, 232, 241);
+            margin: 7px;
+        }
+        
+        .btn1{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(55, 94, 225);
+            margin: 7px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'cpanel/adminheader.html' %}
+
+        <div class="dv" align="Center">
+            <form action="/editcont" method="post" >
+                {% csrf_token %}
+
+                <div class="">
+            
+                    <h2 class="m-0 text-primary">Edit Content</h2>
+                    <h2 class="m-0 text-primary">''''''''''''''''''''''''''</h2>
+                </div><br>
+
+                {% for x in data %}
+
+                <div>
+                    <input type="hidden" value="{{x.id}}" name="id">
+                </div>
+
+                <div >
+                    <input type="Text" value="{{x.cname}}" name="cnmae" readonly  class="tbl">
+                </div>
+
+                <div >
+                    <input type="Text" value="{{x.contitle}}" name="title" class="tbl" placeholder="Title" >
+                </div>
+                
+                <div>
+                    <textarea  name="txtarea" class="tbl" >{{x.condes}}</textarea>
+                </div>
+
+                <div>
+                    <button class="btn1">Update</button>
+                </div>           
+             {% endfor %}
+
+            </form>            
+        </div>
+
+
+    {% include 'cpanel/adminfooter.html' %}
+    
+</body>
+</html>

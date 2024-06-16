@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    {% include 'link.html'%}
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display:inherit;
+  justify-content: center;
+  align-items: center;
+  background: url(/static/bg.jpg) no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper{
+  width: 420px;
+  background:transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  position:absolute;
+  top: 20%;
+  bottom:27%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(236, 222, 222);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper .forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+
+}
+.forgot a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+
+  /*Button Animation Start*/  
+  animation-name: but;
+  animation-duration:10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes but {
+  0% {background-color: #fff;}
+  25% {background-color: #40b3ff;}
+  50% {background-color: #40b3ff;}
+  100% {background-color: #ffffff;}
+  
+}
+
+
+/*Button animation end*/
+.wrapper .register-link{
+  font-size: 15px;
+  text-align: right;
+  
+
+}
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+    {% include 'header.html'%}
+    
+  <div class="wrapper" align="center">
+    <form action="studentlogin" method="post" >
+      {% csrf_token %}
+      <h1>Login</h1>
+      
+      <div class="input-box">
+        <input type="text" placeholder="Email ID" name="email" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" name="pass1" required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="forgot" align="right">
+        <a href="forgotpass">Forgot Password</a>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+
+      <div class="register-link">
+        <a href="student_reg" > Create New Account </a>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

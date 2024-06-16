@@ -1,0 +1,33 @@
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="/admindashboard" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Admin Dashboard</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/admindashboard" class="nav-item nav-link active">Home</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cources</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="/addcource" class="dropdown-item">Add Courses</a>
+                    <a href="/viewcource" class="dropdown-item">view Courses</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Content</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="/addContent" class="dropdown-item">Add Content</a>
+                    <a href="/viewContent" class="dropdown-item">view Content</a>
+                </div>
+            </div>
+
+            <a href="/viewstudent" class="nav-item nav-link">Student view</a>
+            <a href="/passreset" class="nav-item nav-link">Reset PAsword</a>
+            <a href="/adlogout" class="nav-item nav-link"> Welcome! {{request.session.un1}} &nbsp | &nbsp lOGOUT</a>
+           
+</nav>
+<!-- Navbar End -->

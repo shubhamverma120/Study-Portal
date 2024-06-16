@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    {% include 'link.html'%}
+    <style>
+        body{
+            display:inherit;
+            justify-content: center;
+            align-items: center;
+            background: url(/static/bg.jpg) no-repeat;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+          
+          }
+          th{
+            color: aliceblue;
+            font-size: 150%;
+          }
+
+          
+
+          h2{
+            font-size: 200%;
+            color: aliceblue;
+          }
+
+          tr{
+            
+            font-size: 100%;
+            color:aliceblue;
+            width: 100%;
+            height: 100%;
+            margin: 20px;
+            border-radius: 30px;
+          }
+          
+        .tbl{
+            margin: 30px;
+            padding: 20px;
+            width: 70%;
+            height: 30%;
+            font-size: 20px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px auto;
+            border: 10px solid #9ab8c2;
+            border-radius: 50%;
+        }
+    </style>
+    
+</head>
+<body>
+    {% include 'spanel/sheader.html' %}
+    <center>
+
+    <form action="" method="post">
+        {% csrf_token%}
+
+                {% for x in data %}
+                
+                    <table class="tbl">
+
+                        <tr align="center">
+                            <th colspan="2" >
+                                <h2> Student Profile</h2><input type="hidden" value="{{x.id}}" name="id">
+                            </th>
+                        </tr>  
+
+                        <tr align="center">
+                            <td colspan="2">
+                                <img src="static/{{x.simg}}" width="50" height="25">
+                            </td>
+                        </tr>
+
+                        <tr align="center">
+                            <th>
+                                Student name 
+                            </th>
+                            <td>
+                                {{x.sname}}
+                            </td>
+                        </tr>
+
+                        <tr align="center">
+                            <th>
+                                Gender
+                            </th>
+                            <td>
+                               {{x.sgen}}
+                            </td>
+                        </tr>
+
+                        <tr align="center">
+                            <th>
+                                Contact number
+                            </th>
+                            <td>
+                                {{x.sco}}
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <th>
+                                Email ID
+                            </th>
+                            <td>
+                                {{x.email}}
+                            </td>
+                        </tr>
+                        
+                        <tr align="center">
+                            <th>
+                                Address
+                            </th>
+                            <td>
+                                {{x.sadd}}
+                            </td>
+                        </tr>
+
+                    </table>
+
+            {% endfor %}
+       
+            
+    </form>
+</center>
+</body>
+</html>

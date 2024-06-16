@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Content</title>
+    {% include 'link.html' %}
+
+    <style>
+        .dv{
+            margin: 50px;
+            padding: 10px;
+        }
+
+        .tbl{
+            width: 600px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(168, 232, 241);
+            margin: 7px;
+        }
+        
+        .btn1{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(55, 94, 225);
+            margin: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    {% include 'cpanel/adminheader.html' %}
+<br><br><br>
+    <center>
+        <form method="post" action="addcont" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="">
+            
+                <h2 class="m-0 text-primary">Add Content</h2>
+                <h2 class="m-0 text-primary">''''''''''''''''''''''''''</h2>
+            </div><br>
+
+            <div >
+                <select name="sel" class="tbl">
+                    <option> <h3>Select cource </h3></option>
+                    {% for x in data %}
+                    <option>{{x.cname}}</option>
+                     {% endfor %}
+                </select>
+            </div>
+
+            <div>
+               <input type="text" name="title" class="tbl" placeholder="Title of Content" >
+            </div>
+
+            <div>
+                <textarea name="txtarea" class="tbl" placeholder="Description" style="height: 100px;"> </textarea>
+            </div>
+
+            <div>
+                <input type="file" name="cofil" class="tbl" >
+            </div>
+
+            
+            <div>
+                <input type="submit" name="sumc" class="btn1" value="Add Content"
+            </div>
+
+        </form>
+        </center>
+ 
+
+    {% include 'cpanel/adminfooter.html' %}
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Content</title>
+    {% include 'link.html' %}
+
+    <style>
+        .fom{
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .tbl{
+                width: 1400px;
+                height: 60px;
+                margin: 3px;
+        }
+        
+        .btn1{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(52, 153, 168);
+            margin: 7px;
+        }
+    </style>
+
+</head>
+<body>
+    {% include 'cpanel/adminheader.html' %}
+    
+    <div align="center" class="fom">
+        <form action="" method="post" class="tbl">
+            {% csrf_token %}
+            <div>
+                <h2 class="m-0 text-primary">View Content</h2>
+                <h2 class="m-0 text-primary">''''''''''''''''''''''''''</h2>
+            </div>
+                
+            <div align="center" >
+                <table class="table table-bordered" style="border-color:black;" class="tbl">
+                    <tr align="center">
+                        <th>Cource name</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>File</th>
+                        <th>Video link</th>
+                        <th>Delete & Edit</th>
+                    </tr>
+
+                    {% for x in data %}
+
+                        <tr align="center">   
+                            <td>{{x.cname}}</td>
+                            <td>{{x.contitle}}</td>
+                            <td style="text-align: justify;">{{x.condes}}</td>
+                            <td><a href="static/{{x.confile}}">click to view the pdf</td>
+                            <td>{{x.conlink}}</td>
+                            <td>
+                                <a href="delbyidcon/{{x.id}}">❌ &nbsp&nbsp
+                                <a href="editbyidcon/{{x.id}}">Edit</a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+                      
+                </table>
+
+            </div>
+        
+
+        </form>
+    
+    </div>
+
+</body>
+</html>

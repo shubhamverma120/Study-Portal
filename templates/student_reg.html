@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    {% include 'link.html' %}
+    <style>
+        body{
+            display:inherit;
+            justify-content: center;
+            align-items: center;
+            background: url(/static/bg.jpg) no-repeat;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            color: black;
+          
+          }
+          
+        .div{
+            margin: 3px;
+            padding: 5px;
+            
+        }
+        .div1{
+            margin: 3px;
+            padding: 5px;            
+        }
+
+        input::placeholder {
+            color: black; 
+          }
+
+          textarea::placeholder {
+            color: black; 
+          }
+        
+        
+        .tbl{
+            width:500px ;
+            height: 50px;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .tx{
+            width: 500px;
+            height: 50px;
+          
+            margin: 3px;
+            padding: 5px;
+            border-radius: 10px;
+            background: transparent;
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .btn1{
+            width: 150px;
+            height: 50px;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: black;
+            color: aliceblue;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    {% include 'header.html' %}
+
+    <div class="div"   align="center">
+        <form class="tbl text " method="post" action="studentregdata" enctype="multipart/form-data" >
+            {% csrf_token%}
+            <div class="div1">
+                <h2 class="m-0" >Student Registration</h2>
+                <h2 class="">'''''''''''''''''''''''''''''''''''''''''''</h2>
+            </div>
+
+            <div class="div1" >
+                <input type="text" class="tx" placeholder="Student Name" name="sname">
+            </div>
+
+            <div class="div1">
+                <select name="gender" class="tx" >
+                    <option>select Gender</option>
+                    <option value="male" style="color: #000000;" class="dropdown-item" required>Male</option>
+                    <option value="female" style="color: #000000;" class="dropdown-item" required>Female</option>
+                </select>
+            </div>
+
+            <div class="div1" >
+                <input type="Contact no." class="tx"  placeholder="contact numer" name="cno">
+            </div>
+
+            <div class="div1">
+                <input type="email" class="tx" placeholder="Email ID " name="email">
+            </div>
+
+            <div class="div1">
+                <textarea name="sadd" placeholder="Address" class="tx" style="height: 150px; font-size: 20px;"></textarea>
+            </div>
+
+            <div class="div1">
+                <input type="file" class="tx" placeholder="" name="simg">
+            </div>
+
+            <div class="div1">
+                <button class="btn1">Submit</button>
+                <input type="reset" value="Reset" class="btn1">
+            </div>
+
+            
+            
+
+        </form>
+        
+    </div>
+    
+
+   
+
+</body>
+
+</html>
