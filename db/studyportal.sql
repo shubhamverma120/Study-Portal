@@ -361,8 +361,8 @@ CREATE TABLE `studentreg` (
 --
 
 INSERT INTO `studentreg` (`id`, `sname`, `sgen`, `sco`, `email`, `sadd`, `date`, `cpass`, `simg`) VALUES
-(41, 'Shubham Verma', 'male', 7470384888, 'shubhamverma03062001@gmail.com', 'Raipur', '2024-04-29 13:59:36.462132', '1530', 'upload/bg_rcwNVS1.jpg'),
-(44, 'Shubham Verma', 'male', 7470384888, 'rupx2001@gmail.com', 'Raipur', '2024-04-30 15:06:57.011890', '77268', 'upload/bg_Tcwi4LQ.jpg');
+(41, 'Shubham Verma', 'male', 7782366767, 'shubham@gmail.com', 'Raipur', '2024-04-29 13:59:36.462132', '1530', 'upload/bg_rcwNVS1.jpg'),
+(44, 'Shubham Verma', 'male', 7772687863, 'rupesh@gmail.com', 'Raipur', '2024-04-30 15:06:57.011890', '77268', 'upload/bg_Tcwi4LQ.jpg');
 
 --
 -- Indexes for dumped tables
